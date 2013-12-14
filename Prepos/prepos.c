@@ -1,9 +1,11 @@
 //Nicolas Silveira Kagami
 
-#include "aag.h"
+#include "def.h"
 
 void main()
 {
-    aagRead();
+    aagRead("../benchmark/b1/b1.aag");
+    defRead("../benchmark/b1/b1.def");
     aagStatsPrint();
+    defStatsPrint();
 }

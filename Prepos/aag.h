@@ -6,18 +6,40 @@
 
 #define MAX_LINE 50
 
+typedef struct 
+{
+    char * name;
+    int srcX;
+    int srcY;
+} SIGNAL;
+
+typedef struct 
+{
+    char * name;
+    int ID;
+    int x,y;
+} OUTPUT;
+
 FILE * aagFile;
+SIGNAL * signals;
+OUTPUT * outputs;
+char aag_name[MAX_LINE];
 int M;
 int I;
 int L;
 int O;
 int A;
-int * inputs;
-int * outputs;
 
-void aagRead();
+void allocateMem(int number_signals, int number_outs);
+void aagRead(char * aagFileName);
 void aagHeader();
-void aagStatsPrint();
 void aagInputs();
 void aagOutputs();
+void aagSignals();
+void aagInputsNames();
+void aagOutputsNames();
 void aagAnds();
+void aagStatsPrint();
+void aagSignalsPrint();
+int aagFindSignal(char * name);
+int aagFindOutput(char *name);
