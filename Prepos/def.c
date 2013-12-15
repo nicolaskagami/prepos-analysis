@@ -91,7 +91,6 @@ void defIOPositions()
                 }
                 else if(OutputID != -1)
                 {
-                    puts(aux);
                     aux = strtok(NULL,"(");
                     aux = strtok(NULL,"(");
                     aux = strtok(NULL,"(");

@@ -16,7 +16,7 @@ int maxy;
 int nandheight;
 int nandwidth;
 
-void defRead();
+void defRead(char * defFileName);
 void defHeader();
 void defAreas();
 void defStatsPrint();

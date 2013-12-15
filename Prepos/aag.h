@@ -11,6 +11,7 @@ typedef struct
     char * name;
     int srcX;
     int srcY;
+    float delay;
 } SIGNAL;
 
 typedef struct 
@@ -18,6 +19,7 @@ typedef struct
     char * name;
     int ID;
     int x,y;
+    float maxdelay;
 } OUTPUT;
 
 FILE * aagFile;

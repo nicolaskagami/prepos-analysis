@@ -1,11 +1,12 @@
 //Nicolas Silveira Kagami
 
-#include "def.h"
+#include "sdc.h"
 
 void main()
 {
-    aagRead("../benchmark/b1/b1.aag");
-    defRead("../benchmark/b1/b1.def");
+    aagRead("../benchmark/b3/b3.aag");
+    defRead("../benchmark/b3/b3.def");
+    sdcRead("../benchmark/b3/b3.sdc");
     aagStatsPrint();
     defStatsPrint();
 }

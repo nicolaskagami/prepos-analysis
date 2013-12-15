@@ -145,7 +145,8 @@ void aagSignalsPrint()
             if(signals[i].name)
             {
                 printf(" %s\n",signals[i].name);
-                printf("Position: %d %d", signals[i].srcX, signals[i].srcY);
+                printf("Position: %d %d\n", signals[i].srcX, signals[i].srcY);
+                printf("Delay: %f", signals[i].delay);
             }
         }
         else
@@ -161,6 +162,7 @@ void aagSignalsPrint()
         {
             printf(" %s\n",outputs[i].name);
             printf("Position: %d %d\n",outputs[i].x, outputs[i].y);
+            printf("Max Delay: %f\n", outputs[i].maxdelay);
         }
     }
 }
