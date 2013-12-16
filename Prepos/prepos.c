@@ -1,12 +1,22 @@
 //Nicolas Silveira Kagami
 
-#include "sdc.h"
+#include "specs.h"
 
-void main()
+void main(int argc, char ** argv)
 {
-    aagRead("../benchmark/b3/b3.aag");
-    defRead("../benchmark/b3/b3.def");
-    sdcRead("../benchmark/b3/b3.sdc");
-    aagStatsPrint();
-    defStatsPrint();
+    char argument[100];
+    if(argc == 2)
+    {
+        strcpy(argument,argv[1]);
+        strcat(argument,".aag");
+        aagRead(argument);
+        strcpy(argument,argv[1]);
+        strcat(argument,".def");
+        defRead(argument);
+        strcpy(argument,argv[1]);
+        strcat(argument,".sdc");
+        sdcRead(argument);
+        aagStatsPrint();
+        defStatsPrint();
+    }
 }

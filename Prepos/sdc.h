@@ -19,7 +19,7 @@ int numberClocks;
 CLOCK clocks[MAX_CLOCKS];
 
 void sdcRead(char * sdcFileName);
-void sdcCreateClk();
-void sdcSetInputDelay();
-void sdcSetMaxDelay();
+void sdcCreateClk(char * line);
+void sdcSetInputDelay(char * line);
+void sdcSetMaxDelay(char * line);
 void sdcClksPrint();
